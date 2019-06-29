@@ -42,7 +42,8 @@ canvas.onmousemove = function(e) {
   renderBoard(hover,id);
 }
 
-canvas.addEventListener('click',function(e) {
+canvas.addEventListener('contextmenu',function(e) {
+  e.preventDefault();
   var r = canvas.getBoundingClientRect(),
       x = e.clientX - r.left,
       y = e.clientY - r.top,
