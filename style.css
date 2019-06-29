@@ -1,0 +1,21 @@
+html, body {
+  margin-left: 100;
+  margin-right: 100;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: silver;
+}
+
+#main-body {
+  background-color: white;
+  justify-content: space-between;
+}
+
+h1 {
+  color: lightgrey;
+}
+
+#canvas {
+  border: 2px solid black;
+}

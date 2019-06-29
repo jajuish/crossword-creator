@@ -8,10 +8,6 @@ for(var i=0;i<450;i+=30) {
   }
 }
 
-// cx.lineWidth = 2
-// while(r = rects[counter++]) cx.strokeRect(r.x, r.y, r.w, r.h)
-// console.log('hi')
-
 var _i,_b;
 
 function renderBoard(hover, id) {
