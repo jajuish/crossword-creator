@@ -45,3 +45,34 @@ canvas.onmousemove = function(e) {
   }
   renderBoard(hover,id);
 }
+
+canvas.addEventListener('click',function(e) {
+  var r = canvas.getBoundingClientRect(),
+      x = e.clientX - r.left,
+      y = e.clientY - r.top,
+      hover = false;
+
+  cx.clearRect(0,0,canvas.width,canvas.height)
+
+  for(var i=rects.length - 1,b;b = rects[i]; i--) {
+    if(x >= b.x && x <= b.x + b.w &&
+       y >= b.y && y <= b.y + b.h) {
+
+        console.log(x,y)
+
+        if(rects[i].col == 'black') {
+          rects[i].col = 'white'
+          rects[i].hovercol = 'lightgrey'
+        }
+        else {
+          rects[i].col = 'black'
+          rects[i].hovercol = 'grey'
+        }
+
+        hover = true;
+        id = i;
+        break;
+    }
+  }
+  renderBoard(hover,id);
+},false)
